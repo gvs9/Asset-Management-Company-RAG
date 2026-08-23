@@ -82,3 +82,13 @@ This document outlines the step-by-step implementation plan for the Mutual Fund 
 *   **Step 7.2:** Stress-test the Refusal Module with edge-case advisory queries.
 *   **Step 7.3:** Verify that no PII (session state) is being stored or tracked inappropriately.
 *   **Step 7.4:** Draft the final `README.md` containing setup instructions, architecture overview, and known limitations.
+
+---
+
+## Phase 8: Data Ingestion Scheduler
+**Goal:** Automate the data ingestion pipeline to fetch the latest mutual fund data daily.
+
+*   **Step 8.1:** Develop a scheduler script (e.g., `src/scheduler.py`) using a library like `schedule` or `APScheduler`.
+*   **Step 8.2:** Configure the scheduler to automatically execute the full ingestion sequence (`scraper.py` -> `cleaner.py` -> `chunker.py` -> `vector_store.py`) once every day.
+*   **Step 8.3:** Implement robust logging within the scheduler to monitor daily update successes and capture any failures.
+*   **Step 8.4:** Document instructions in the `README.md` on how to deploy or run the scheduler as a background service.
