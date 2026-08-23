@@ -89,7 +89,7 @@ This document outlines the step-by-step implementation plan for the Mutual Fund 
 **Goal:** Automate the data ingestion pipeline to fetch the latest mutual fund data daily using a CI/CD workflow.
 
 *   **Step 8.1:** Create a GitHub Actions workflow file (e.g., `.github/workflows/daily_ingestion.yml`).
-*   **Step 8.2:** Configure a `schedule` trigger using cron syntax to run the workflow automatically once every day.
+*   **Step 8.2:** Configure a `schedule` trigger using cron syntax (`30 4 * * *`) to run the workflow automatically every day at 10:00 AM IST (4:30 AM UTC).
 *   **Step 8.3:** Define the workflow steps to check out the repository, set up Python, install dependencies, and execute the full ingestion sequence (`scraper.py` -> `cleaner.py` -> `chunker.py` -> `vector_store.py`).
 *   **Step 8.4:** Configure the workflow to commit and push the newly updated data files and vector database back to the `main` branch.
 *   **Step 8.5:** Securely manage API keys (e.g., `GROQ_API_KEY`) by adding them to GitHub Actions Secrets and passing them to the workflow environment.
