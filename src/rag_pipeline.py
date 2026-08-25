@@ -17,8 +17,8 @@ GROQ_MODEL_NAME = os.getenv("GROQ_MODEL_NAME", "qwen/qwen3.6-27b")
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 CHROMA_DB_DIR = os.path.join(DATA_DIR, "chroma_db")
 
-# Initialize the Groq client natively to avoid extra dependencies
-client = Groq(api_key=GROQ_API_KEY)
+# Initialize the Groq client securely. Fallback to None if key is missing so the app doesn't crash on import.
+client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 
 def get_retriever():
     """Initializes the Vector DB retriever with Top-K=3 strategy."""
@@ -32,6 +32,8 @@ def generate_answer(query: str) -> str:
     """
     Step 5.2: Build the RAG chain and generate the answer.
     """
+    if client is None:
+        return "Server Configuration Error: The GROQ_API_KEY environment variable has not been set in Railway."
     retriever = get_retriever()
     retrieved_docs = retriever.invoke(query)
     
