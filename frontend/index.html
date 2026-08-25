@@ -304,7 +304,11 @@
         chatContainer.parentElement.scrollTop = chatContainer.parentElement.scrollHeight;
 
         try {
-            const res = await fetch('/chat', {
+            // Replace this with your Railway backend URL (e.g. 'https://my-app.up.railway.app')
+            const BACKEND_URL = ''; 
+            const endpoint = BACKEND_URL ? `${BACKEND_URL}/chat` : '/chat';
+            
+            const res = await fetch(endpoint, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ prompt: text })
