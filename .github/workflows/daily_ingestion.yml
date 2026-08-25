@@ -2,8 +2,8 @@ name: Daily Data Ingestion
 
 on:
   schedule:
-    # 4:30 AM UTC is 10:00 AM IST
-    - cron: '30 4 * * *'
+    # 4:00 AM UTC is 9:30 AM IST
+    - cron: '0 4 * * *'
   workflow_dispatch: # Allow manual triggers
 
 jobs:
