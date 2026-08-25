@@ -1,6 +1,4 @@
 from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import os
 from src.query_router import analyze_intent
@@ -17,15 +15,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
 class ChatRequest(BaseModel):
     prompt: str
 
-@app.get("/", response_class=HTMLResponse)
-async def read_index():
-    with open("static/index.html", "r", encoding="utf-8") as f:
-        return f.read()
+@app.get("/")
+async def root():
+    return {"message": "Navi AI Backend is running. The chat API is at /chat"}
 
 @app.post("/chat")
 async def chat_endpoint(req: ChatRequest):
