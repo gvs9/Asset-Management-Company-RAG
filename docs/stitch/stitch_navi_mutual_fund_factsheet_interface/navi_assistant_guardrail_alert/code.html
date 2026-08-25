@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Navi AI Assistant - Guardrail State</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Geist -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-container": "#75859d",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "primary-fixed": "#dae2fd",
+                        "tertiary": "#000000",
+                        "on-secondary-container": "#00714d",
+                        "tertiary-container": "#0b1c30",
+                        "surface-variant": "#e0e3e5",
+                        "primary": "#000000",
+                        "surface": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-tint": "#565e74",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "inverse-primary": "#bec6e0",
+                        "on-primary-container": "#7c839b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1e",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-error-container": "#93000a",
+                        "secondary": "#006c49",
+                        "outline-variant": "#c6c6cd",
+                        "outline": "#76777d",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-container": "#6cf8bb",
+                        "primary-container": "#131b2e",
+                        "surface-container": "#eceef0",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "background": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-secondary-fixed": "#002113",
+                        "on-surface-variant": "#45464d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "label-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Geist"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Ambient Shadow Level 2 for Floating Elements */
+        .shadow-level-2 {
+            box-shadow: 0px 12px 32px rgba(15, 23, 42, 0.08);
+        }
+
+        /* Subtle Entry Animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 100ms; opacity: 0; }
+        .delay-200 { animation-delay: 200ms; opacity: 0; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col relative selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- JSON Component: TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-container-low border-b border-surface-variant dark:border-outline-variant shadow-sm">
+<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16 w-full max-w-container-max mx-auto">
+<!-- Leading Icon -->
+<button aria-label="Menu" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors scale-95 active:opacity-80 transition-all text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</button>
+<!-- Headline / Brand -->
+<h1 class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                Navi AI Assistant
+            </h1>
+<!-- Trailing Icon -->
+<button aria-label="More options" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors scale-95 active:opacity-80 transition-all text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Chat Canvas -->
+<main class="flex-1 w-full max-w-[800px] mx-auto pt-24 pb-40 px-margin-mobile md:px-gutter flex flex-col gap-6">
+<!-- Timestamp / Meta (Contextual) -->
+<div class="text-center animate-fade-in-up">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest bg-surface-container py-1 px-3 rounded-full">Today, 10:42 AM</span>
+</div>
+<!-- User Message -->
+<div class="flex justify-end animate-fade-in-up delay-100">
+<div class="max-w-[85%] md:max-w-[75%] bg-primary text-on-primary rounded-2xl rounded-tr-sm px-5 py-4 shadow-sm relative group">
+<p class="font-body-md text-body-md leading-relaxed">
+                    Should I invest in the Navi Nifty 50 Index Fund?
+                </p>
+<!-- Subtle decorative element -->
+<div class="absolute -right-2 top-0 w-4 h-4 bg-primary [clip-path:polygon(0_0,0%_100%,100%_0)]"></div>
+</div>
+</div>
+<!-- AI Assistant Refusal Message (Guardrail State) -->
+<div class="flex justify-start animate-fade-in-up delay-200">
+<!-- AI Avatar/Sparkle Icon -->
+<div class="hidden md:flex w-8 h-8 rounded-full bg-surface-container-high items-center justify-center mr-3 shrink-0 mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<!-- Refusal Bubble -->
+<div class="max-w-[90%] md:max-w-[80%] bg-surface-container-lowest rounded-2xl rounded-tl-sm shadow-[0_4px_20px_rgba(15,23,42,0.04)] border border-surface-variant overflow-hidden relative group">
+<!-- Refusal/Warning Accent Strip -->
+<!-- Using error color semantic token for guardrail/prohibition -->
+<div class="absolute left-0 top-0 bottom-0 w-[3px] bg-error/80"></div>
+<div class="px-5 py-5 flex flex-col gap-3 pl-6">
+<!-- Advisory Header -->
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">policy</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-error">Advisory Intent Detected</span>
+</div>
+<!-- Response Content -->
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                        I can provide factual data about the Navi Nifty 50 Index Fund, such as its performance history or expense ratio. However, I am strictly prohibited from providing investment advice or recommendations. Please consult a certified financial advisor for investment decisions.
+                    </p>
+<!-- Contextual Action (Optional suggestion to keep user engaged safely) -->
+<div class="mt-2 pt-3 border-t border-surface-variant/50 flex flex-wrap gap-2">
+<button class="bg-surface-container hover:bg-surface-container-high transition-colors font-label-sm text-label-sm text-on-surface px-4 py-2 rounded-full border border-outline-variant/30">
+                            Show Expense Ratio
+                        </button>
+<button class="bg-surface-container hover:bg-surface-container-high transition-colors font-label-sm text-label-sm text-on-surface px-4 py-2 rounded-full border border-outline-variant/30">
+                            View Performance History
+                        </button>
+</div>
+</div>
+<!-- Subtle decorative element -->
+<div class="absolute -left-2 top-0 w-4 h-4 bg-surface-container-lowest border-t border-l border-surface-variant [clip-path:polygon(100%_0,0_0,100%_100%)] hidden md:block"></div>
+</div>
+</div>
+</main>
+<!-- Floating Input Area -->
+<div class="fixed bottom-0 left-0 right-0 w-full bg-gradient-to-t from-background via-background/90 to-transparent pt-12 pb-8 px-margin-mobile z-40">
+<div class="max-w-[800px] mx-auto">
+<div class="bg-surface-container-lowest rounded-[16px] shadow-level-2 border border-surface-variant flex items-end p-2 pl-4 md:pl-6 transition-all hover:shadow-[0_16px_40px_rgba(15,23,42,0.12)]">
+<!-- Leading Action (e.g., Attach) -->
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors shrink-0 mb-1">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<!-- Input Field -->
+<div class="flex-1 px-2 py-3 min-h-[48px] max-h-[120px] overflow-y-auto custom-scrollbar flex items-center">
+<textarea class="w-full bg-transparent border-none focus:ring-0 font-body-md text-body-md text-on-surface outline-none placeholder:text-on-surface-variant resize-none" oninput="this.style.height = ''; this.style.height = Math.min(this.scrollHeight, 120) + 'px'" placeholder="Ask about funds, metrics, or documents..." rows="1"></textarea>
+</div>
+<!-- Send Button -->
+<button class="bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shrink-0 mb-1 hover:opacity-90 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">arrow_upward</span>
+</button>
+</div>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant/70 mt-3 hidden md:block">
+                Navi AI provides factual information only. Not financial advice.
+            </p>
+</div>
+</div>
+<!-- Inline Script for Auto-resizing textarea & simple interactions -->
+<script>
+        // Ensure textarea is single line initially
+        document.addEventListener('DOMContentLoaded', () => {
+            const textarea = document.querySelector('textarea');
+            if(textarea) {
+                textarea.style.height = '24px'; // approximate single line height
+            }
+        });
+    </script>
+</body></html>

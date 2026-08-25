@@ -26,9 +26,9 @@
     {
         "url": "https://groww.in/mutual-funds/navi-liquid-fund-direct-growth",
         "name": "Navi Liquid Fund",
-        "clean_text_for_rag": "Fund Name: Navi Liquid Fund\nFund URL: https://groww.in/mutual-funds/navi-liquid-fund-direct-growth\nExpense Ratio: 0.17%\nExit Load: A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.\nMinimum SIP Amount: ₹100\nFund Size (AUM): ₹76.37 Cr\nRiskometer Classification: Low to Moderate Risk\nInvestment Objective: The Scheme seeks to generate a reasonable return commensurate with low risk and a high degree of liquidity, from a portfolio constituted of money market securities and debt securities.\nFund Manager: Tanmay Sethi\n",
+        "clean_text_for_rag": "Fund Name: Navi Liquid Fund\nFund URL: https://groww.in/mutual-funds/navi-liquid-fund-direct-growth\nExpense Ratio: 0.26%\nExit Load: A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.\nMinimum SIP Amount: ₹100\nFund Size (AUM): ₹76.37 Cr\nRiskometer Classification: Low to Moderate Risk\nInvestment Objective: The Scheme seeks to generate a reasonable return commensurate with low risk and a high degree of liquidity, from a portfolio constituted of money market securities and debt securities.\nFund Manager: Tanmay Sethi\n",
         "metadata": {
-            "expense_ratio": "0.17%",
+            "expense_ratio": "0.26%",
             "exit_load": "A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.",
             "min_sip": "₹100",
             "aum": "₹76.37 Cr",

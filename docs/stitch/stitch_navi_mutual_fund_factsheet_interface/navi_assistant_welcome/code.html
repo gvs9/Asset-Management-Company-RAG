@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Navi AI Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-container": "#75859d",
+                        "secondary-fixed-dim": "#4edea3",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "primary-fixed": "#dae2fd",
+                        "tertiary": "#000000",
+                        "on-secondary-container": "#00714d",
+                        "tertiary-container": "#0b1c30",
+                        "surface-variant": "#e0e3e5",
+                        "primary": "#000000",
+                        "surface": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-tint": "#565e74",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "tertiary-fixed": "#d3e4fe",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "inverse-primary": "#bec6e0",
+                        "on-primary-container": "#7c839b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#191c1e",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-error-container": "#93000a",
+                        "secondary": "#006c49",
+                        "outline-variant": "#c6c6cd",
+                        "outline": "#76777d",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-container": "#6cf8bb",
+                        "primary-container": "#131b2e",
+                        "surface-container": "#eceef0",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "background": "#f7f9fb",
+                        "surface-container-high": "#e6e8ea",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-secondary-fixed": "#002113",
+                        "on-surface-variant": "#45464d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Geist", "sans-serif"],
+                        "headline-lg-mobile": ["Geist", "sans-serif"],
+                        "label-md": ["Geist", "sans-serif"],
+                        "headline-lg": ["Geist", "sans-serif"],
+                        "body-lg": ["Geist", "sans-serif"],
+                        "body-md": ["Geist", "sans-serif"],
+                        "headline-md": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Geist', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+
+        .ambient-shadow {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.04);
+        }
+
+        .ambient-shadow-float {
+            box-shadow: 0px 12px 32px rgba(15, 23, 42, 0.08);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container-low fixed top-0 w-full z-50 border-b border-surface-variant dark:border-outline-variant shadow-sm transition-all duration-300">
+<div class="flex items-center justify-between px-margin-mobile md:px-margin-desktop h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 0;">trending_up</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Navi AI Assistant</span>
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-full scale-95 active:opacity-80 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col pt-20 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full relative">
+<!-- Disclaimer Banner -->
+<div class="w-full max-w-3xl mx-auto mb-12 bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 flex items-start gap-3 ambient-shadow text-on-surface-variant transition-transform hover:-translate-y-[2px] duration-300">
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 1;">warning</span>
+<p class="font-body-md text-body-md">
+<strong>Disclaimer:</strong> Facts-only. No investment advice. This AI is strictly designed to provide factual information from official documents.
+            </p>
+</div>
+<!-- Chat Container -->
+<div class="flex-grow flex flex-col justify-center items-center max-w-[800px] mx-auto w-full space-y-12 mb-8">
+<div class="text-center space-y-4">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-fixed-dim/20 text-primary mb-4">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">How can I help you understand Navi Mutual Funds?</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Ask me anything about expenses, managers, or objectives based on official documentation.</p>
+</div>
+<!-- Suggested Questions Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+<!-- Card 1 -->
+<button class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 text-left hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ambient-shadow group flex flex-col justify-between h-full">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed-dim mb-4 group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 0;">payments</span>
+<p class="font-body-md text-body-md text-on-surface">"What is the expense ratio of the Navi Liquid Fund?"</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary mt-4 self-end transition-colors" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+<!-- Card 2 -->
+<button class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 text-left hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ambient-shadow group flex flex-col justify-between h-full">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed-dim mb-4 group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 0;">person</span>
+<p class="font-body-md text-body-md text-on-surface">"Who is the fund manager for the Hybrid fund?"</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary mt-4 self-end transition-colors" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+<!-- Card 3 -->
+<button class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 text-left hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ambient-shadow group flex flex-col justify-between h-full">
+<div>
+<span class="material-symbols-outlined text-secondary-fixed-dim mb-4 group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 0;">target</span>
+<p class="font-body-md text-body-md text-on-surface">"What is the investment objective of the Nifty 50 Index Fund?"</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary mt-4 self-end transition-colors" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Floating Input Area -->
+<div class="fixed bottom-0 left-0 w-full p-4 md:p-8 pointer-events-none z-40">
+<div class="max-w-[800px] mx-auto pointer-events-auto">
+<div class="glass-effect rounded-2xl border border-surface-variant ambient-shadow-float p-2 flex items-center gap-2 bg-surface-container-lowest/80">
+<button class="p-3 text-outline hover:text-primary transition-colors rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add_circle</span>
+</button>
+<input class="flex-grow bg-transparent border-none focus:ring-0 font-body-lg text-body-lg text-on-surface placeholder-on-surface-variant px-2" placeholder="Ask a factual question about Navi Mutual Funds..." type="text"/>
+<button class="bg-primary text-on-primary p-3 rounded-xl hover:bg-primary/90 transition-colors shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+<div class="text-center mt-2">
+<span class="font-label-sm text-label-sm text-outline">AI-generated information may contain errors. Always verify with official Navi documents.</span>
+</div>
+</div>
+</div>
+<!-- Footer Spacer -->
+<div class="h-24 md:h-32"></div>
+<script>
+        // Simple micro-interaction for input focus
+        const input = document.querySelector('input');
+        const inputContainer = input.parentElement;
+        
+        input.addEventListener('focus', () => {
+            inputContainer.classList.add('border-primary/50');
+            inputContainer.classList.add('shadow-lg');
+        });
+        
+        input.addEventListener('blur', () => {
+            inputContainer.classList.remove('border-primary/50');
+            inputContainer.classList.remove('shadow-lg');
+        });
+    </script>
+</body></html>

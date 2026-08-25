@@ -28,7 +28,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 
 ## Navi Liquid Fund
 - **URL:** https://groww.in/mutual-funds/navi-liquid-fund-direct-growth
-- **Expense Ratio:** 0.17%
+- **Expense Ratio:** 0.26%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
 - **Fund Size (AUM):** ₹76.37 Cr
