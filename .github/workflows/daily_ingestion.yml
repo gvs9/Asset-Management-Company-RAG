@@ -6,6 +6,9 @@ on:
     - cron: '30 4 * * *'
   workflow_dispatch: # Allow manual triggers
 
+permissions:
+  contents: write
+
 jobs:
   ingest-data:
     runs-on: ubuntu-latest
