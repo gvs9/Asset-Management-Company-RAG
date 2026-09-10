@@ -31,7 +31,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.26%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹76.37 Cr
+- **Fund Size (AUM):** ₹73.81 Cr
 - **Riskometer:** Low to Moderate Risk
 - **Investment Objective:** The Scheme seeks to generate a reasonable return commensurate with low risk and a high degree of liquidity, from a portfolio constituted of money market securities and debt securities.
 - **Fund Manager:** Tanmay Sethi
