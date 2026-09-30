@@ -7,7 +7,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.10%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹4,129.71 Cr
+- **Fund Size (AUM):** ₹4,129.70 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to achieve return equivalent to Nifty 50 Index by investing in stocks of companies comprising Nifty 50 Index, subject to tracking error.
 - **Fund Manager:** Ashutosh Shirwaikar
@@ -31,7 +31,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.26%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹73.81 Cr
+- **Fund Size (AUM):** ₹73.80 Cr
 - **Riskometer:** Moderate Risk
 - **Investment Objective:** The Scheme seeks to generate a reasonable return commensurate with low risk and a high degree of liquidity, from a portfolio constituted of money market securities and debt securities.
 - **Fund Manager:** Tanmay Sethi
