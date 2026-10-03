@@ -16,7 +16,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 
 ## Navi Nifty MidSmallcap 400 Index Fund
 - **URL:** https://groww.in/mutual-funds/navi-nifty-midsmallcap-400-index-fund-direct-growth
-- **Expense Ratio:** 0.49%
+- **Expense Ratio:** 0.52%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
 - **Fund Size (AUM):** ₹13.48 Cr
@@ -40,7 +40,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 
 ## Navi Aggressive Hybrid Fund
 - **URL:** https://groww.in/mutual-funds/navi-aggressive-hybrid-fund-direct-growth
-- **Expense Ratio:** 0.71%
+- **Expense Ratio:** 0.69%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
 - **Fund Size (AUM):** ₹118.14 Cr
@@ -52,7 +52,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 
 ## Navi Nifty 500 Multicap 50:25:25 Index Fund
 - **URL:** https://groww.in/mutual-funds/navi-nifty-500-multicap-50:25:25-index-fund-direct-growth
-- **Expense Ratio:** 0.46%
+- **Expense Ratio:** 0.49%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
 - **Fund Size (AUM):** ₹27.66 Cr
