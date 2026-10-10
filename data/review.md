@@ -10,7 +10,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Fund Size (AUM):** ₹4,129.70 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to achieve return equivalent to Nifty 50 Index by investing in stocks of companies comprising Nifty 50 Index, subject to tracking error.
-- **Fund Manager:** Ashutosh Shirwaikar
+- **Fund Manager:** Rushabh Patel
 
 ---
 
@@ -22,7 +22,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Fund Size (AUM):** ₹13.48 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to achieve a return equivalent to Nifty MidSmallcap 400 Index by investing in the stocks of companies which comprise the Nifty MidSmallcap 400 Index, subject to tracking error.
-- **Fund Manager:** Ashutosh Shirwaikar
+- **Fund Manager:** Rushabh Patel
 
 ---
 
@@ -58,7 +58,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Fund Size (AUM):** ₹27.66 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to achieve return equivalent to Nifty 500 Multicap 50:25:25 Index by investing in stocks of companies comprising Nifty 500 Multicap 50:25:25 Index, subject to tracking error.
-- **Fund Manager:** Ashutosh Shirwaikar
+- **Fund Manager:** Rushabh Patel
 
 ---
 
