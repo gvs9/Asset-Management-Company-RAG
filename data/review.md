@@ -7,7 +7,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.10%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹4,129.70 Cr
+- **Fund Size (AUM):** ₹3,900.01 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to achieve return equivalent to Nifty 50 Index by investing in stocks of companies comprising Nifty 50 Index, subject to tracking error.
 - **Fund Manager:** Rushabh Patel
@@ -19,7 +19,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.52%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹13.48 Cr
+- **Fund Size (AUM):** ₹12.40 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to achieve a return equivalent to Nifty MidSmallcap 400 Index by investing in the stocks of companies which comprise the Nifty MidSmallcap 400 Index, subject to tracking error.
 - **Fund Manager:** Rushabh Patel
@@ -43,7 +43,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.69%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹118.14 Cr
+- **Fund Size (AUM):** ₹115.20 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to provide periodic returns and capital appreciation over a long period of time, investing predominantly in equity and equity related instruments.
 - **Fund Manager:** Tanmay Sethi
@@ -55,7 +55,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.49%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹27.66 Cr
+- **Fund Size (AUM):** ₹27.98 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to achieve return equivalent to Nifty 500 Multicap 50:25:25 Index by investing in stocks of companies comprising Nifty 500 Multicap 50:25:25 Index, subject to tracking error.
 - **Fund Manager:** Rushabh Patel
