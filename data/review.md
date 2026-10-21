@@ -31,7 +31,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.26%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹81.55 Cr
+- **Fund Size (AUM):** ₹81.56 Cr
 - **Riskometer:** Moderate Risk
 - **Investment Objective:** The Scheme seeks to generate a reasonable return commensurate with low risk and a high degree of liquidity, from a portfolio constituted of money market securities and debt securities.
 - **Fund Manager:** Tanmay Sethi
@@ -43,7 +43,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Expense Ratio:** 0.69%
 - **Exit Load:** A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
 - **Minimum SIP:** ₹100
-- **Fund Size (AUM):** ₹115.20 Cr
+- **Fund Size (AUM):** ₹115.21 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to provide periodic returns and capital appreciation over a long period of time, investing predominantly in equity and equity related instruments.
 - **Fund Manager:** Tanmay Sethi
