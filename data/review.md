@@ -34,7 +34,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Fund Size (AUM):** ₹81.56 Cr
 - **Riskometer:** Moderate Risk
 - **Investment Objective:** The Scheme seeks to generate a reasonable return commensurate with low risk and a high degree of liquidity, from a portfolio constituted of money market securities and debt securities.
-- **Fund Manager:** Tanmay Sethi
+- **Fund Manager:** Snehashis Mukherjee
 
 ---
 
@@ -46,7 +46,7 @@ Here is the parsed and cleaned data extracted from the scraped URLs for your rev
 - **Fund Size (AUM):** ₹115.21 Cr
 - **Riskometer:** Very High Risk
 - **Investment Objective:** The scheme seeks to provide periodic returns and capital appreciation over a long period of time, investing predominantly in equity and equity related instruments.
-- **Fund Manager:** Tanmay Sethi
+- **Fund Manager:** Rushabh Patel
 
 ---
 
